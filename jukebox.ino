@@ -25,6 +25,7 @@ void setup() {
 void loop() {
   if ((digitalRead(0)== HIGH) && (queue[1] != 0)){
     myDFPlayer.playMp3Folder(queue[1]);
+    queue[1]=0;
     delay(200);
   }
   else {
@@ -44,6 +45,3 @@ void loop() {
       }  
     }
 }
-
-
-
